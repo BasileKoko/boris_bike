@@ -1,11 +1,12 @@
 require_relative 'bike'
+require_relative 'van'
 
 class DockingStation
   attr_reader :bike
   attr_reader :DEFAULT_CAPACITY
   attr_reader :capacity
   attr_reader :initialize
-  attr_reader :broken_ones
+  attr_accessor :broken_ones
 
 
   DEFAULT_CAPACITY = 20
