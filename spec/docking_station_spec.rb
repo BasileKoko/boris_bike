@@ -28,5 +28,10 @@ it 'should raise an error if station is full' do
 end
 
 it {is_expected.to respond_to(:report_broken)}
+it 'should be able to report broken bikes'do
+    bike = Bike.new
+    subject.dock(bike)
+    expect(subject.report_broken).to eq [bike]
+end
 
 end
