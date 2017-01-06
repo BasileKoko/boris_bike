@@ -2,7 +2,6 @@ require './lib/docking_station'
 
 describe DockingStation do
   it {is_expected.to respond_to :release_bike}
-  #it {is_expected.to respond_to(:initialize).with(1).argument}
 
 
   it 'should respond to working method' do
@@ -14,8 +13,6 @@ describe DockingStation do
   it { is_expected.to respond_to(:dock).with(1).argument}
   it 'should be able to dock bike'do
     bike = Bike.new
-    # subject = DockingStation.new
-    # DockingStation.new.docking(var bike from line 14 in this spec file)
     expect(subject.dock(bike)).to eq [bike]
   end
 
@@ -29,5 +26,7 @@ it 'should raise an error if station is full' do
   subject.capacity.times{subject.dock Bike.new}
   expect {subject.dock(Bike.new)}.to raise_error('station is full')
 end
+
+it {is_expected.to respond_to(:report_broken)}
 
 end
