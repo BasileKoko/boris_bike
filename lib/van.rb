@@ -3,7 +3,8 @@ class Van
     @transit_bikes = []
   end
 
-  def pickup
-    @transit_bikes = @broken_ones
+  def pickup station
+    @transit_bikes = station.broken_ones
+    station.broken_ones = []
   end
 end
