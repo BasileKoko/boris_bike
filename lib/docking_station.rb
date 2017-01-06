@@ -11,9 +11,9 @@ class DockingStation
   end
 
   def dock(bike)
-
-  fail 'station is full' if @bikes
-    @bikes = bike
+  fail 'station is full' if @bikes.count >= 20
+    @bikes << bike
   end
+
 attr_reader :bike
 end

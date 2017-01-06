@@ -14,7 +14,7 @@ describe DockingStation do
     bike = Bike.new
     # subject = DockingStation.new
     # DockingStation.new.docking(var bike from line 14 in this spec file)
-    expect(subject.dock(bike)).to eq bike
+    expect(subject.dock(bike)).to eq [bike]
   end
 
 
