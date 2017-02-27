@@ -1,4 +1,6 @@
 class Van
+  attr_accessor :transit_bikes
+
   def initialize
     @transit_bikes = []
   end
